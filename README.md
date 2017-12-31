@@ -23,6 +23,7 @@ kill -9 pid
 
 ###############################
 
+spring boot docker 참조 : https://github.com/spring-guides/gs-spring-boot-docker
 
 1. docker image 생성
 ./gradlew build buildDocker
