@@ -17,11 +17,15 @@ http://forum.developers.naver.com/c/13-category
 시작
 ./gradlew build && java -jar build/libs/spring-boot-naver-api-practice-0.0.1-SNAPSHOT.jar
 
+백그라운드시작
+./gradlew build
+nohup java -jar build/libs/spring-boot-naver-api-practice-0.0.1-SNAPSHOT.jar &
+
 종료
 lsof -i :8888
 kill -9 pid
 
-###############################
+########################################################
 
 spring boot docker 참조 : https://github.com/spring-guides/gs-spring-boot-docker
 
@@ -33,3 +37,5 @@ docker run -p 8888:8888 -t com.example/spring-boot-naver-api-practice:0.0.1-SNAP
 
 3. docker 실행 시 프로파일 설정
 docker run -e "SPRING_PROFILES_ACTIVE=prod" -p 8888:8888 -t com.example/spring-boot-naver-api-practice:0.0.1-SNAPSHOT
+
+도커는 안됨...써글

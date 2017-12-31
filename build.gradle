@@ -36,13 +36,22 @@ repositories {
 	mavenCentral()
 }
 
+configurations {
+	provided
+	providedRuntime
+}
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.apache.tomcat.embed:tomcat-embed-jasper')
 	compile('javax.servlet:jstl')
+	compile('org.springframework.boot:spring-boot-starter-tomcat')
+	compile('org.apache.tomcat.embed:tomcat-embed-jasper')
 	runtime('com.h2database:h2')
+//	provided('org.springframework.boot:spring-boot-starter-tomcat')
+//	provided('org.apache.tomcat.embed:tomcat-embed-jasper')
+//	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+//	providedRuntime('org.apache.tomcat.embed:tomcat-embed-jasper')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
